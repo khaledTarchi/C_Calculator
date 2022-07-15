@@ -1,16 +1,15 @@
 /*
 
-
-Tarchi Khaled 
+Tarchi Khaled Group 10
 
 scientific calculator project using C language.
  In this mini-project, I tried to use all my previous knowledge such as:
  Conditional structures (if, switch), loops (for, do while),
  Functions and Procedures......ex.
 
-
 */
 
+rgb(r,g,b)`
 
 #include <stdio.h>
 #include <stdlib.h>	
@@ -24,34 +23,27 @@ scientific calculator project using C language.
 
 void Menu(void){
 	
-printf("\n*************| MENU |**************\n\n");
-printf("1)  --> Addition\n");
-printf("2)  --> Subtraction\n");
-printf("3)  --> Multiplication\n");
-printf("4)  --> Division\n");
-printf("5)  --> Modify the sign\n");
-printf("6)  --> Percentage\n");
-printf("7)  --> Factorial n!\n");
-printf("8)  --> power 10^n\n");
-printf("9)  --> Power y^x\n");
-printf("10) --> Sin(x)\n");
-printf("11) --> Cos(x)\n");
-printf("12) --> Tan(x)\n");
-printf("13) --> Ln(x)\n");
-printf("14) --> Log(x)\n");
-printf("15) --> Exp(x)\n");
-printf("16) --> Quit\n");
+printf("\n*************| MENU |**************\n");
+printf("*                                 *\n");	
+printf("*  1)  --> Addition               *\n");
+printf("*  2)  --> Subtraction            *\n");
+printf("*  3)  --> Multiplication         *\n");
+printf("*  4)  --> Division               *\n");
+printf("*  5)  --> Modify the sign        *\n");
+printf("*  6)  --> Percentage             *\n");
+printf("*  7)  --> Factorial n!           *\n");
+printf("*  8)  --> power 10^n             *\n");
+printf("*  9)  --> Power y^x              *\n");
+printf("*  10) --> Sin(x)                 *\n");
+printf("*  11) --> Cos(x)                 *\n");
+printf("*  12) --> Tan(x)                 *\n");
+printf("*  13) --> Ln(x)                  *\n");
+printf("*  14) --> Log10(x)               *\n");
+printf("*  15) --> Exp(x)                 *\n");
+printf("*  16) --> Quit                   *\n");
+printf("*                                 *\n");	
+printf("***********************************\n\n");
 }
-
-
-void List_of_types_of_calculators(void){
-printf("\n------>Type Of Caclculator:\n\n");
-	
-    printf("1) Standard Calculator\n2) Scientific Calculator\n3) Quit\n");}
-
-
-
-
 
 
 
@@ -161,13 +153,22 @@ float sin_(float Number){
     
 
 float cos_(float Number){
+	
      float angl=(Number*PI)/180;
-  
+	
      return cos(angl);}
      
      
+     
+     
 void njom(void ){
-printf("\n************************************\n");
+printf("\n\n\n\n\n\n\n\n\n====================================\n");
+       }  
+ 
+             
+       
+void njom2(void ){
+printf("\n====================================\n");
 
 	}  
 
@@ -180,23 +181,21 @@ printf("\n************************************\n");
 
 
 
-int main(void)
-{
+int main(void){
 	
-int choix;
-long int intNumb,rwpwt;
-char ltr;
-printf("\n\n");		
-printf("==============| Calculator |==========\n");
 
+int choix,intNumb;
+printf("\n\n");		
+printf("===========| CALCUlATOR |==========\n\n");
 Menu();	
+
 int repet=1;   
 float Number1, Number2;
    
 do{
              
               do {
-              printf("\nEnter Your Choice:\n=>");
+              printf("\nEnter Your Choice:\n\n=> ");
               scanf("%d",&choix);
               if(choix<1||choix>16)
          printf("Error:Your choice incorrect.\n");
@@ -210,7 +209,7 @@ do{
                           scanf("%f",&Number2);
                   njom();
                     printf("\n\t%.3f + %.3f = %.3f \n",Number1, Number2,addition(Number1,Number2));
-                  njom();
+                  njom2();
                           break;
                    
                   case 2: printf("2) Subtraction\n");
@@ -220,7 +219,7 @@ do{
                           scanf("%f",&Number2);
                   njom();
                       printf("\n\t%.3f - %.3f = %..3f \n",Number1, Number2,soustraction(Number1,Number2));
-                  njom();
+                  njom2();
                           break;
                    
                    case 3: printf("3) Multiplcation\n");
@@ -230,7 +229,7 @@ do{
                           scanf("%f",&Number2);
                   njom();
                           printf("\n\t%.3f * %.3f = %.3f \n",Number1, Number2,multiplication(Number1,Number2));
-                  njom();
+                  njom2();
                           break;
 
                   
@@ -241,7 +240,7 @@ do{
                           scanf("%f",&Number2);
                   njom();
                           printf("\n\t%.3f / %.3f = %.3f \n",Number1, Number2,division(Number1,Number2));
-                  njom();
+                  njom2();
                           break;
 
                  
@@ -250,6 +249,7 @@ do{
                          scanf("%f",&Number1);
                  njom();
                          printf("\n\tYour Before %.3f After %.3f",Number1,modify_sign(Number1));
+                 njom2();
                          break;
                 
                 case 6:  printf("6) Percentage\n");
@@ -257,7 +257,7 @@ do{
                          scanf("%f",&Number1);
                 njom();
                        printf("\n\tPercentage is: %.3f ",percentage(Number1));
-                njom();
+                njom2();
                          break;
                 
   
@@ -272,7 +272,7 @@ do{
                      }while (intNumb<0);
                      njom();
                          printf("\t\t%ld! = %lu\n",intNumb,factorial(intNumb));
-                     njom();
+                     njom2();
                       break;
 
                 
@@ -281,7 +281,7 @@ do{
                        scanf("%f",&Number1);
                      njom();
                        printf("\t\t10^%1.f = %f\n",Number1,power10_n(Number1));
-                     njom();
+                     njom2();
                        break ;
                 
                 case 9:printf("9) Power x^y\n");
@@ -292,7 +292,7 @@ do{
              scanf("%f",&Number2);
     njom();
     printf("\t\t%.2lf^%.2lf = %.2lf\n", Number1,Number2, pow(Number1, Number2));
-      njom();
+      njom2();
                         break;
 
                   
@@ -301,7 +301,7 @@ do{
                           scanf("%f",&Number1);
                      njom();
                           printf("\t\tsin(%.3f)=%.3f\n",Number1,sin_(Number1));
-                     njom();
+                     njom2();
                           break;
 
 
@@ -313,7 +313,7 @@ do{
                        scanf("%f",&Number1);
                      njom();
                        printf("\t\tCos(%.3f)=%.3f\n",Number1,cos_(Number1));
-                     njom();
+                     njom2();
                        break;
               
                case 12: printf("12) Tan(x)\n");
@@ -321,17 +321,25 @@ do{
                        scanf("%f",&Number1);
                      njom();
                        printf("\t\ttan(%.3f)=%.3f\n",Number1,(sin_(Number1)/cos_(Number1)));
-                     njom();
+                     njom2();
                        break;
                 
                      
                case 13:printf("13) Ln(x)\n");
-                      printf("\n\n->INCOMPLETE-...\n\n");
+                  printf("Enter  a Number x : ");
+                        scanf("%f",&Number1);
+                     njom();
+                     printf("\n\t\tLn(%.3f)= %.3f\n",Number1,log(Number1));
+                     njom2();
                       break;
               
                      
-               case 14: printf("14) Log(x)\n");
-                       printf("\n\n->INCOMPLETE-...\n\n");
+               case 14: printf("14) Log10(x)\n");
+                  printf("Enter  a Number x : ");
+                        scanf("%f",&Number1);
+                     njom();
+                   printf("\t\tLog10(%.3f)= %.3f\n",Number1,log10(Number1));
+                     njom2();
                        break;
                 
                      
@@ -340,7 +348,7 @@ do{
                         scanf("%f",&Number1);
                      njom();
                         printf("\t\tExp(%.3f)= %.3f\n",Number1,exp(Number1));
-                     njom();
+                     njom2();
                         break;
 
 
